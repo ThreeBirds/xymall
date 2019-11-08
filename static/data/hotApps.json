@@ -1,0 +1,32 @@
+{
+	"errorCode": 0,
+	"data": [{
+		"id": 1,
+		"class": "#icon-huoche",
+		"title": "火车票"
+	}, {
+		"id": 2,
+		"class": "#icon-jiayou",
+		"title": "加油站"
+	}, {
+		"id": 3,
+		"class": "#icon-ziyuan",
+		"title": "话费"
+	}, {
+		"id": 4,
+		"class": "#icon-youxi",
+		"title": "游戏"
+	}, {
+		"id": 5,
+		"class": "#icon-dianying",
+		"title": "电影"
+	}, {
+		"id": 6,
+		"class": "#icon-jipiao",
+		"title": "机票"
+	}, {
+		"id": 7,
+		"class": "#icon-jiudian",
+		"title": "酒店"
+	}]
+}

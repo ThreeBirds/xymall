@@ -1,0 +1,31 @@
+{
+	"errorCode": 0,
+	"data": [
+		{
+			"id": 0,
+			"title": "猜你喜欢",
+			"list": [
+			 {
+				 "id": 0,
+				 "img": "/static/img/yaliguo.jpg",
+				 "title": "【灰太狼压力锅】好男人就应该用灰太狼压力锅，炖羊首选",
+				 "tags": ["急速退款", "质量保证"],
+				 "price": 299.0
+			 }
+			]
+		},
+		{
+			"id": 1,
+			"title": "新品上市",
+			"list": [
+			 {
+				 "id": 0,
+				 "img": "/static/img/dianfanbao.jpg",
+				 "title": "【mini电饭煲】个人使用的小型电饭煲",
+				 "tags": ["特价优惠", "包邮"],
+				 "price": 199.0
+			 }
+			]
+		}
+	]
+}
