@@ -8,36 +8,33 @@
   </div>
 </template>
 
-<script scoped>
-import { bannerApi } from "@/assets/Api.js";
+<script lang="ts" scoped>
+import { bannerApi } from "@/assets/Api";
+import { Component, Vue } from "vue-property-decorator";
 
-export default {
-  name: "HomeBanner",
-  data() {
-    return {
-      bannerList: []
-    };
-  },
-  created() {
-    this.$axios
+@Component
+export default class HomeBanner extends Vue {
+  private bannerList: [] = [];
+  created(): void {
+    (this as any).$axios
       .get(bannerApi)
-      .then(rep => {
+      .then((rep: any) => {
         this.bannerList = rep.data.data;
       })
-      .catch(err => {});
+      .catch((err: any) => {});
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
 #root {
   .banner {
-	position: relative;
+    position: relative;
     height: 180px;
     width: 100%;
     .banner-item {
       > img {
-		width: 100%;
+        width: 100%;
       }
     }
   }

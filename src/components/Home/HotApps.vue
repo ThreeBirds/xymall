@@ -7,7 +7,7 @@
             <svg class="icon" aria-hidden="true">
               <use :xlink:href="i.class" />
             </svg>
-			<div class="icon-title">{{i.title}}</div>
+            <div class="icon-title">{{i.title}}</div>
           </div>
         </div>
       </mt-swipe-item>
@@ -15,58 +15,53 @@
   </div>
 </template>
 
-<script scoped>
+<script lang="ts" scoped>
 import "@/assets/iconfont/iconfont.js";
 import "@/assets/iconfont/iconfont.css";
-import {hotAppsApi} from '@/assets/Api.js'
+import { hotAppsApi } from "@/assets/Api";
+import { Component, Vue } from "vue-property-decorator";
 
-export default {
-  name: "HotApps",
-  data() {
-    return {
-      swipeItems: []
-    };
-  },
+@Component
+export default class HotApps extends Vue {
+  private swipeItems: [] = [];
 
-  created() {
-	this.$axios.get(hotAppsApi)
-	.then(rep => {
-		console.log('tag', rep.data)
-		let tmp = []
-		let index = 0
-		while(index < rep.data.data.length) {
-			tmp.push(rep.data.data.slice(index, index += 5))
-		}
-		this.swipeItems = tmp
-	})
-	.catch(err => {
-
-	})
+  created(): void {
+    (this as any).$axios
+      .get(hotAppsApi)
+      .then((rep: any) => {
+        let tmp: any = [];
+        let index: number = 0;
+        while (index < rep.data.data.length) {
+          tmp.push(rep.data.data.slice(index, (index += 5)));
+        }
+        this.swipeItems = tmp;
+      })
+      .catch((err: any) => {});
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
 #root {
-  background: white;
+  background: red;
   .hot-container {
-	padding-top: 10px;
-	padding-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     height: 50px;
     .swipe-item {
       display: flex;
-	  justify-content: space-evenly;
+      justify-content: space-evenly;
       .icon {
         width: 30px;
         height: 30px;
         vertical-align: -0.15em;
         fill: currentColor;
         overflow: hidden;
-	  }
-	  .icon-title {
-		  font-size: 12px;
-		  margin-top: 5px;
-	  }
+      }
+      .icon-title {
+        font-size: 12px;
+        margin-top: 5px;
+      }
     }
   }
 }

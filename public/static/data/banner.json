@@ -3,7 +3,7 @@
 	"data": [{
 		"id": 1,
 		"productId": "DE0001",
-		"cover": "/static/img/banner01.png",
+		"cover": "static/img/banner01.png",
 		"url": null,
 		"type": null,
 		"createTime": "2019-11-06T10:59:10",
@@ -11,7 +11,7 @@
 	}, {
 		"id": 2,
 		"productId": "FA0001",
-		"cover": "/static/img/banner02.png",
+		"cover": "static/img/banner02.png",
 		"url": null,
 		"type": null,
 		"createTime": "2019-11-06T10:59:10",
@@ -19,7 +19,7 @@
 	}, {
 		"id": 3,
 		"productId": "FB0001",
-		"cover": "/static/img/banner03.png",
+		"cover": "static/img/banner03.png",
 		"url": null,
 		"type": null,
 		"createTime": "2019-11-06T10:59:10",

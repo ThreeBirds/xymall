@@ -1,6 +1,6 @@
 <template>
   <div id="root">
-	  <router-view></router-view>
+    <router-view></router-view>
     <mt-tabbar v-model="selected" fixed>
       <mt-tab-item id="home">
         <i class="iconfont">&#xe613;</i>
@@ -22,30 +22,23 @@
   </div>
 </template>
 
-<script scoped>
-import Footer from "@/components/common/Footer";
+<script lang="ts" scoped>
 import "@/assets/iconfont/iconfont.css";
+import { Component, Prop, Vue, Watch } from "vue-property-decorator";
 
-export default {
-  name: "Main",
-  data() {
-    return {
-      selected: "home"
-    };
-  },
-  components: {
-    "v-footer": Footer
-  },
-  watch: {
-	  selected(val) {
-		  this.$router.push({path: val})
-	  }
-  }
-};
+@Component
+export default class Main extends Vue {
+	private selected: string = "home";
+
+	@Watch("selected")
+	onSelected(val: string):void {
+      this.$router.push({ name: val });
+	}
+}
 </script>
 
 <style lang="scss" scoped>
 #root {
-	margin: 0;
+  margin: 0;
 }
 </style>
