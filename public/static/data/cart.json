@@ -1,0 +1,23 @@
+{
+	"errorCode": 0,
+	"data": [
+		{
+			"id": 1,
+			"productId": "DE0001",
+			"cover": "static/img/banner01.png",
+			"title": "【小米手环】2019全新上市 青少年运动手环",
+			"productName": "小米手环",
+			"price": 99.9,
+			"count": 1
+		},
+		{
+			"id": 2,
+			"productId": "FA0001",
+			"cover": "static/img/yaliguo.png",
+			"title": "【灰太狼压力锅】炖羊专用",
+			"productName": "灰太狼压力锅",
+			"price": 199.9,
+			"count": 1
+		}
+	]
+}

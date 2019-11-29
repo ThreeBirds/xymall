@@ -10,7 +10,7 @@
         <i class="iconfont">&#xe7f9;</i>
         <div>分类</div>
       </mt-tab-item>
-      <mt-tab-item id="basket">
+      <mt-tab-item id="cart">
         <i class="iconfont">&#xe6cf;</i>
         <div>购物车</div>
       </mt-tab-item>

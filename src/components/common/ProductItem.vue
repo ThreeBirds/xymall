@@ -49,14 +49,16 @@ export default class ProductItem extends Vue {
       margin-left: 10px;
       height: 100%;
       flex-grow: 1;
-      border-bottom: 1px #eeeeee solid;
+      border-bottom: 1px lightgray solid;
       .p-title {
         font-size: 14px;
+		text-align: left;
         font-family: "Microsoft YaHei";
         font-weight: 600;
       }
       .p-bottom {
         padding-bottom: 5px;
+		text-align: left;
         > span:first-child {
           display: block;
           color: lightcoral;

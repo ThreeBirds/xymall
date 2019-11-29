@@ -1,0 +1,19 @@
+{
+	"errorCode": 0,
+	"data": {
+		"id": 0,
+		"imgs": [
+			"/static/img/xiaomi01.png",
+			"/static/img/xiaomi02.png",
+			"/static/img/xiaomi03.png"
+		],
+		"title": "【小米手环】2019全新上市 青少年运动手环",
+		"tags": [
+			"急速退款",
+			"质量保证"
+		],
+		"detail": "/static/data/detail.html",
+		"price": 99.9,
+		"productName": "小米手环"
+	}
+}

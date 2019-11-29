@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<script>
+
+	let obj = {
+		tn: "qwer",
+		age: 12,
+		on: () => {
+			console.log('tag', this.tn)
+		}
+	}
+	function testClick1() {
+		let o = {
+			tn: "sss",
+			oi: function () {obj.on()}
+		}
+		o.oi()
+	}
+
+	function testClick2() {
+		alert(this.tnn)
+	}
+	</script>
+</head>
+<body>
+	<button style="width: 200px;height: 100px;" onclick="testClick1()">11111111111111</button>
+	<button style="width: 200px;height: 100px;" onclick="testClick2()">22222222222</button>
+</body>
+</html>

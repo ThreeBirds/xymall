@@ -27,7 +27,7 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 
 @Component
 export default class Classify extends Vue {
-  types: [] = [];
+  types: any = [];
   searchKey: string = "";
   selectIndex: string = "0";
 
@@ -36,6 +36,10 @@ export default class Classify extends Vue {
       .get(classListApi)
       .then((rep: any) => {
         this.types = rep.data.data;
+        this.$router.push({
+          name: "classifyResults",
+          query: { tid: this.types[0] }
+        });
       })
       .catch((err: any) => {});
   }
@@ -44,10 +48,9 @@ export default class Classify extends Vue {
     this.selectIndex = index;
     this.$router.push({
       name: "classifyResults",
-      query: { tid: (this as any).selectIndex }
+      query: { tid: this.selectIndex }
     });
   }
-
 }
 </script>
 
@@ -73,10 +76,10 @@ export default class Classify extends Vue {
     display: flex;
     background: #fafafa;
     .left {
-      width: 80px;
       text-align: left;
       ul {
         padding-left: 0px;
+        width: 80px;
         max-height: calc(100vh - 300px);
         overflow: scroll;
         li {
@@ -94,7 +97,6 @@ export default class Classify extends Vue {
     .right {
       display: flex;
       flex-grow: 1;
-      background: greenyellow;
     }
   }
 }
